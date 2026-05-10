@@ -1,5 +1,5 @@
-// Paste your Apps Script /exec URL here after deploying apps-script/Code.gs.
-const WEB_APP_URL = 'PASTE_YOUR_APPS_SCRIPT_URL_HERE';
+// Apps Script /exec URL — see apps-script/Code.gs for the backend.
+const WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbwhvfsBGSREz-wt8PTJOdeLXBS8fdsjAW-SlagNL8ZmhIrGgVnCzoUJhfSyYbCf6oSI/exec';
 
 const form = document.getElementById('rsvp-form');
 const submitBtn = document.getElementById('submit-btn');
