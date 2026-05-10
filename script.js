@@ -45,7 +45,8 @@ form.addEventListener('submit', async (e) => {
   }
 
   submitBtn.disabled = true;
-  submitBtn.textContent = 'Sending…';
+  submitBtn.classList.add('sending');
+  submitBtn.textContent = 'Sending';
 
   try {
     const data = new FormData(form);
@@ -75,6 +76,7 @@ form.addEventListener('submit', async (e) => {
     updateWhoCount();
   } catch (err) {
     submitBtn.disabled = false;
+    submitBtn.classList.remove('sending');
     submitBtn.textContent = 'Count me in';
     showError("Couldn't submit — try again, or RSVP to one of the hosts below.");
     console.error(err);

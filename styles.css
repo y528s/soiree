@@ -210,7 +210,24 @@ body {
 
 #submit-btn:hover { background: var(--terracotta-deep); }
 #submit-btn:active { transform: translateY(1px); }
-#submit-btn:disabled { opacity: 0.6; cursor: progress; }
+#submit-btn:disabled { cursor: progress; }
+#submit-btn.sending {
+  background: #4F8A5A;
+  opacity: 1;
+}
+#submit-btn.sending::after {
+  content: '';
+  display: inline-block;
+  width: 0.85em;
+  height: 0.85em;
+  margin-left: 8px;
+  vertical-align: -2px;
+  border: 2px solid rgba(255,255,255,0.4);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
 
 .form-error {
   color: var(--terracotta-deep);
