@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>צאתכם לשלום — Fireside, S'mores &amp; Shots</title>
+  <meta name="description" content="Fireside, s'mores &amp; shots — Thursday May 28, 2026, 8:30pm in Yosef's backyard.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="card">
+    <p class="preamble">Please join us as we wish our friends</p>
+
+    <img src="assets/title.png" alt="צאתכם לשלום — Fireside, S'mores & Shots" class="title-image">
+
+    <p class="date">Thursday May 28, 2026.</p>
+    <p class="location">Approx 8:30 pm in Yosef's backyard.</p>
+
+    <section class="honorees">
+      <h2 class="section-label">In Honor Of</h2>
+      <ul class="honoree-list">
+        <li>Leiba and Sruli Estrin</li>
+        <li>Tehila and Benny Feldman</li>
+        <li>Ruthy and Rabbi Mark Glass</li>
+        <li>Shoshana and Naftali Presser</li>
+        <li>Beth and Rabbi Eddie Shapiro</li>
+        <li>Jacqueline and Ricky Wolder</li>
+      </ul>
+      <p class="also">as well as Gittel and Raviv Horesh, and Tom and Rachel Ryan.</p>
+    </section>
+
+    <img src="assets/smores.png" alt="" class="smores-illustration">
+
+    <section class="rsvp" aria-labelledby="rsvp-heading">
+      <h2 id="rsvp-heading" class="section-label">RSVP</h2>
+      <form id="rsvp-form" novalidate>
+        <label>
+          <span>Name</span>
+          <input type="text" name="name" required autocomplete="name">
+        </label>
+        <label>
+          <span>Email</span>
+          <input type="email" name="email" required autocomplete="email">
+        </label>
+        <label>
+          <span>Phone</span>
+          <input type="tel" name="phone" required autocomplete="tel">
+        </label>
+        <label>
+          <span>How many are coming</span>
+          <input type="number" name="count" min="1" max="8" value="2" required>
+        </label>
+        <label>
+          <span>I'll bring</span>
+          <select name="bringing" id="bringing-select">
+            <option value="Nothing — just me!">Nothing — just me!</option>
+            <option value="S'mores supplies">S'mores supplies</option>
+            <option value="Soft drinks">Soft drinks</option>
+            <option value="Hard drinks">Hard drinks</option>
+            <option value="Snacks">Snacks</option>
+            <option value="Paper goods">Paper goods</option>
+            <option value="Other">Something else…</option>
+          </select>
+        </label>
+        <label id="bringing-other-wrap" hidden>
+          <span>What you'll bring</span>
+          <input type="text" name="bringing_other" id="bringing-other" placeholder="e.g. brisket, plates, lawn chairs">
+          <small class="hint">Or text a host to ask what's still needed.</small>
+        </label>
+        <div class="honeypot" aria-hidden="true">
+          <label>Website<input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+        </div>
+        <button type="submit" id="submit-btn">Count me in</button>
+        <p id="form-error" class="form-error" hidden></p>
+      </form>
+      <div id="confirmation" class="confirmation" hidden>
+        <p class="confirm-fire" aria-hidden="true">🔥</p>
+        <p class="confirm-text">You're in. See you May 28.</p>
+      </div>
+    </section>
+
+    <section class="who">
+      <button id="who-toggle" type="button" class="who-toggle">See who's coming<span id="who-count"></span></button>
+      <ul id="who-list" class="who-list" hidden></ul>
+    </section>
+
+    <p class="hosts">
+      Alexa &amp; Yaakov Cohen,<br>
+      Brenda &amp; Howard Rosenthal,<br>
+      Yosef Silver,<br>
+      and David &amp; Joanna Slusky.
+    </p>
+    <p class="adults">Adults only, please.</p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
