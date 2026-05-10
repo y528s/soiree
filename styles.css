@@ -138,6 +138,10 @@ body {
   display: none;
 }
 
+#rsvp-form[hidden] {
+  display: none;
+}
+
 #rsvp-form label > span {
   font-size: 0.78rem;
   letter-spacing: 0.14em;
